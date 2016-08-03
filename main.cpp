@@ -53,7 +53,7 @@ toggleStealth()
 
 bool progbackground()
 {
-	//if (RegisterHotKey(NULL, 1, MOD_CONTROL | MOD_ALT, 0x24)) 
+	if (RegisterHotKey(NULL, 1, MOD_CONTROL | MOD_ALT, VK_HOME)) 
 	if (RegisterHotKey(NULL, 2, MOD_CONTROL | MOD_ALT, VK_END))
 	if (RegisterHotKey(NULL, 3, MOD_CONTROL | MOD_ALT, VK_PRIOR))
 	if (RegisterHotKey(NULL, 4, MOD_CONTROL | MOD_ALT, VK_NEXT))
@@ -73,11 +73,11 @@ bool progbackground()
 			string called = "%no_event%";
 			switch (msg.wParam)
 			{
-				/*case 1:
+				case 1:
 					keybd_event(VK_MEDIA_PLAY_PAUSE, 0, 0, 0);
   					keybd_event(VK_MEDIA_PLAY_PAUSE, 0, KEYEVENTF_KEYUP, 0);
   					called = "VK_MEDIA_PLAY_PAUSE";  					
-  					break;*/
+  					break;
   				case 2:
   					keybd_event(VK_MEDIA_STOP, 0, 0, 0);
   					keybd_event(VK_MEDIA_STOP, 0, KEYEVENTF_KEYUP, 0);
